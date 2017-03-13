@@ -7,3 +7,6 @@
 [submodule "tomorrow-theme"]
 	path = tomorrow-theme
 	url = git@github.com:chriskempson/tomorrow-theme.git
+[submodule "zsh-custom/powerlevel9k"]
+	path = zsh-custom/powerlevel9k
+	url = git@github.com:bhilburn/powerlevel9k.git
