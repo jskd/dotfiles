@@ -1,0 +1,15 @@
+
+
+xterm*termName: xterm-256color
+xterm*locale: true
+xterm*metaSendsEscape: true
+xterm*eightBitInput: false
+
+
+*faceName: Inconsolata\ for\ Powerline
+*faceSize: 12
+*renderFont: true
+
+! Add theme
+#include ".dotfiles/tomorrow-theme/Xdefaults/XresourceTomorrowNightBright"
+
