@@ -8,8 +8,11 @@ set nocompatible
 
 set runtimepath+=~/.vim/bundles/dein.vim
 
-
 if dein#load_state('~/.vim/bundles/dein.vim')
+
+
+  let g:dein#types#git#default_protocol= 'ssh'
+
 
   call dein#begin(expand('~/.vim/dein'))
 
