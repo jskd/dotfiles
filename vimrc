@@ -309,7 +309,7 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
 nmap <F8> :TagbarToggle<CR>
 
 syntax enable
-colorscheme Monokai
+colorscheme Tomorrow-Night-Bright
 let g:airline_theme='molokai'
 
 " syntastic cpp
