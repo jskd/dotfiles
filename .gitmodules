@@ -10,3 +10,6 @@
 [submodule "zsh-custom/powerlevel9k"]
 	path = zsh-custom/powerlevel9k
 	url = git@github.com:bhilburn/powerlevel9k.git
+[submodule "vim/bundles/dein.vim"]
+	path = vim/bundles/dein.vim
+	url = git@github.com:Shougo/dein.vim.git
