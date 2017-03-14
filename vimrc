@@ -1,55 +1,64 @@
 set encoding=utf-8
 set fileencoding=utf-8
-
 set nocompatible
-filetype off
-
+  
 "-----------------------------------------------------------------------
 " Plugins
 "-----------------------------------------------------------------------
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set runtimepath+=~/.vim/bundles/dein.vim
 
-Plugin 'gmarik/vundle'
-Plugin 'majutsushi/tagbar'
 
-Plugin 'airblade/vim-gitgutter'
+if dein#load_state('~/.vim/bundles/dein.vim')
 
-Plugin 'terryma/vim-multiple-cursors'
+  call dein#begin(expand('~/.vim/dein'))
 
-" Navigation
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'xuyuanp/nerdtree-git-plugin'
+  call dein#add('Shougo/dein.vim')
 
-" syntax checking
-Plugin 'scrooloose/syntastic'
+  call dein#add( 'gmarik/vundle' )
+  call dein#add( 'majutsushi/tagbar')
 
-" auto completion
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
-Plugin 'Shougo/neoinclude.vim'
-Plugin 'osyo-manga/vim-marching'
-Plugin 'the-lambda-church/merlin' "ocaml
-Plugin 'davidhalter/jedi-vim' " Py
-Plugin 'rip-rip/clang_complete' " cpp
+  call dein#add( 'airblade/vim-gitgutter')
 
-" display color rgb/hex
-Plugin 'lilydjwg/colorizer'
+  call dein#add( 'terryma/vim-multiple-cursors')
 
-" powerbar
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+  " Navigation
+  call dein#add( 'scrooloose/nerdtree.git')
+  call dein#add( 'xuyuanp/nerdtree-git-plugin')
 
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'nathanaelkane/vim-indent-guides'
+  " syntax checking
+  call dein#add( 'scrooloose/syntastic')
 
-Plugin 'ntpeters/vim-better-whitespace'
+  " auto completion
+  call dein#add( 'Shougo/vimproc.vim')
+  call dein#add( 'Shougo/neocomplete.vim')
+  call dein#add( 'Shougo/neosnippet')
+  call dein#add( 'Shougo/neosnippet-snippets')
+  call dein#add( 'Shougo/neoinclude.vim')
+  call dein#add( 'osyo-manga/vim-marching')
+  call dein#add( 'the-lambda-church/merlin') "ocaml
+  call dein#add( 'davidhalter/jedi-vim') " Py
+  call dein#add( 'rip-rip/clang_complete') " cpp
 
-call vundle#end()
+  " display color rgb/hex
+  call dein#add( 'lilydjwg/colorizer')
+
+  " powerbar
+  call dein#add( 'vim-airline/vim-airline')
+  call dein#add( 'vim-airline/vim-airline-themes')
+
+  call dein#add( 'altercation/vim-colors-solarized')
+  call dein#add( 'flazz/vim-colorschemes')
+  call dein#add( 'nathanaelkane/vim-indent-guides')
+
+  call dein#add('ntpeters/vim-better-whitespace')
+
+  call dein#end()
+  call dein#save_state()
+
+endif
+
+
 filetype plugin indent on
 
 " enable syntax highlighting
