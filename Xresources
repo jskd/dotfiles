@@ -5,6 +5,10 @@ xterm*locale: true
 xterm*metaSendsEscape: true
 xterm*eightBitInput: false
 
+xterm*VT100.translations: \
+<Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n \
+Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n \
+Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
 *faceName: Inconsolata\ for\ Powerline
 *faceSize: 12

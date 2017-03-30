@@ -10,6 +10,6 @@ ln -fsT $DOTFILES_ROOT/bash_logout ~/.bash_logout
 ln -fsT $DOTFILES_ROOT/bash_profile ~/.bash_profile
 ln -fsT $DOTFILES_ROOT/bashrc ~/.bashrc
 ln -fsT $DOTFILES_ROOT/zshrc ~/.zshrc
-ln -fsT $DOTFILES_ROOT/Xresources ~/.Xresources 
+ln -fsT $DOTFILES_ROOT/Xresources ~/.Xresources
 ln -fsT $DOTFILES_ROOT/xinitrc ~/.xinitrc
 
