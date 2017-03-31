@@ -10,9 +10,16 @@ xterm*VT100.translations: \
 Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n \
 Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
-*faceName: Inconsolata\ for\ Powerline
+*faceName: InconsolataForPowerline\ Nerd\ Font
 *faceSize: 12
 *renderFont: true
+
+
+!! Font prefferenes
+urxvt.font: xft:InconsolataForPowerline\ Nerd\ Font:pixelsize=13
+urxvt.boldFont: xft:InconsolataForPowerline\ Nerd\ Font:pixelsize=13:weight=bold
+
+
 
 ! Add theme
 #include ".dotfiles/tomorrow-theme/Xdefaults/XresourceTomorrowNightBright"

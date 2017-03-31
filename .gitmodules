@@ -13,3 +13,6 @@
 [submodule "vim/bundles/dein.vim"]
 	path = vim/bundles/dein.vim
 	url = git@github.com:Shougo/dein.vim.git
+[submodule "nerd-fonts"]
+	path = nerd-fonts
+	url = git@github.com:ryanoasis/nerd-fonts.git
