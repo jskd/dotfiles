@@ -6,7 +6,13 @@ export ZSH=$HOME/.dotfiles/oh-my-zsh
 export ZSH_CUSTOM=$HOME/.dotfiles/zsh-custom/
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
+
+
+
 POWERLEVEL9K_MODE='nerdfont-fontconfig'
+
+
+
 
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
