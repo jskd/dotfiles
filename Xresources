@@ -1,5 +1,3 @@
-
-
 xterm*termName: xterm-256color
 xterm*locale: true
 xterm*metaSendsEscape: true
@@ -19,8 +17,5 @@ Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 urxvt.font: xft:InconsolataForPowerline\ Nerd\ Font:pixelsize=13
 urxvt.boldFont: xft:InconsolataForPowerline\ Nerd\ Font:pixelsize=13:weight=bold
 
-
-
 ! Add theme
 #include ".dotfiles/tomorrow-theme/Xdefaults/XresourceTomorrowNightBright"
-

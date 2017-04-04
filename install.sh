@@ -12,7 +12,7 @@ make_link () {
 
 ln -fsT $DOTFILES_ROOT $HOME/.dotfiles
 
-declare -a arr=("profile" "vim" "vimrc" "bash_login" "bash_logout" "bash_profile" "bashrc" "zshrc" "Xresources" "xinitrc")
+declare -a arr=("gitignore" "gitconfig" "profile" "vim" "vimrc" "bash_login" "bash_logout" "bash_profile" "bashrc" "zshrc" "Xresources" "xinitrc")
 
 for i in "${arr[@]}"
 do

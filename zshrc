@@ -3,30 +3,31 @@ export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.dotfiles/oh-my-zsh
 
-
-ZSH_CUSTOM=$HOME/.dotfiles/zsh-custom/
-
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+export ZSH_CUSTOM=$HOME/.dotfiles/zsh-custom/
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status rbenv)
-POWERLEVEL9K_STATUS_VERBOSE=false
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-
-export DEFAULT_USER="$USER"
+POWERLEVEL9K_MODE='nerdfont-fontconfig'
 
 
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
+#POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX='$'
 
 
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=4
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=('dir' 'vcs')
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=('status' 'background_jobs' 'command_execution_time' 'battery' 'time')
 
+POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX='root_indicator'
 
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="❯ "
 
-
+POWERLEVEL9K_OS_ICON_BACKGROUND="white"
+POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
+POWERLEVEL9K_DIR_HOME_FOREGROUND="white"
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="white"
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
 
 
 
