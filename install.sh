@@ -1,15 +1,25 @@
-#!/bin/sh
+#!/bin/bash
 
-DOTFILES_ROOT=$(pwd)
+DOTFILES_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-ln -fsT $DOTFILES_ROOT ~/.dotfiles
-ln -fsT $DOTFILES_ROOT/vim ~/.vim
-ln -fsT $DOTFILES_ROOT/vimrc ~/.vimrc
-ln -fsT $DOTFILES_ROOT/bash_login ~/.bash_login
-ln -fsT $DOTFILES_ROOT/bash_logout ~/.bash_logout
-ln -fsT $DOTFILES_ROOT/bash_profile ~/.bash_profile
-ln -fsT $DOTFILES_ROOT/bashrc ~/.bashrc
-ln -fsT $DOTFILES_ROOT/zshrc ~/.zshrc
-ln -fsT $DOTFILES_ROOT/Xresources ~/.Xresources
-ln -fsT $DOTFILES_ROOT/xinitrc ~/.xinitrc
+make_link () {
+  if [ -f $HOME/.$1 ] ; then
+    cp $HOME/.$1 $HOME/.$1.old
+  fi
+  ln -fsT $DOTFILES_ROOT/$1 $HOME/.$1
+}
+
+
+ln -fsT $DOTFILES_ROOT $HOME/.dotfiles
+
+declare -a arr=("profile" "vim" "vimrc" "bash_login" "bash_logout" "bash_profile" "bashrc" "zshrc" "Xresources" "xinitrc")
+
+for i in "${arr[@]}"
+do
+   make_link $i
+done
+
+
+ 
+
 
