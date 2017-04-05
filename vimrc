@@ -395,6 +395,20 @@ call NERDTreeHighlightFile('cpp', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('h', 'Magenta', 'none', '#ff00ff', '#151515')
 call NERDTreeHighlightFile('hpp', 'Magenta', 'none', '#ff00ff', '#151515')
 
+
+let g:NERDTreeIndicatorMapCustom = {
+  \ "Modified"  : '\uf0ad ', # 
+  \ "Staged"    : '\uf055 ', # 
+  \ "Untracked" : '\uF059 ', # 
+  \ "Renamed"   : '\uf040 ', # 
+  \ "Unmerged"  : '\uf407 ', # 
+  \ "Deleted"   : '\uf00d ', # 
+  \ "Dirty"     : "\uf1f8 ", # 
+  \ "Clean"     : '\uf00c ', # 
+  \ 'Ignored'   : '\uf070 ', # 
+  \ "Unknown"   : '\uf141 ' # 
+\ }
+
 autocmd BufNewFile,BufReadPost *.c,*.h,*.cpp,*.hpp call SetCOptions()
 function! SetCOptions()
   :retab
