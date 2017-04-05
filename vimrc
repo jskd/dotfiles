@@ -280,15 +280,15 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 "if !exists('g:neocomplete#force_omni_input_patterns')
 "    let g:neocomplete#force_omni_input_patterns = {}
 "endif
-let g:neocomplete#force_omni_input_patterns.c = 
+let g:neocomplete#force_omni_input_patterns.c=
   \ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
-let g:neocomplete#force_omni_input_patterns.cpp = 
+let g:neocomplete#force_omni_input_patterns.cpp =
   \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
-let g:neocomplete#force_omni_input_patterns.ocaml = 
+let g:neocomplete#force_omni_input_patterns.ocaml =
   \ '[^. *\t]\.\w*\|\h\w*|#'
 let g:neocomplete#force_omni_input_patterns.python =
   \ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
-let g:neocomplete#force_omni_input_patterns.php = 
+let g:neocomplete#force_omni_input_patterns.php =
   \ '[^. \t]->\h\w*\|\h\w*::'
 
 
@@ -320,26 +320,25 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_error_symbol = '☠'
-let g:syntastic_style_error_symbol = '⁉️'
-let g:syntastic_warning_symbol = '⚠️'
-let g:syntastic_style_warning_symbol = '⸮'
+let g:syntastic_error_symbol=''
+let g:syntastic_style_error_symbol='⚑'
+let g:syntastic_warning_symbol=''
+let g:syntastic_style_warning_symbol='⚐'
 
-"highlight link SyntasticErrorSign SignColumn 
+"highlight link SyntasticErrorSign SignColumn
 "highlight link SyntasticWarningSign SignColumn
 "highlight link SyntasticStyleErrorSign SignColumn
 "highlight link SyntasticStyleWarningSign SignColumn
 
 highlight SyntasticErrorSign ctermfg=white ctermbg=red
 highlight SyntasticWarningSign ctermfg=white ctermbg=blue
-highlight SyntasticStyleErrorSign ctermfg=white ctermbg=red
+highlight SyntasticStyleErrorSign ctermfg=white ctermbg=yellow
 highlight SyntasticStyleWarningSign ctermfg=white ctermbg=blue
 
 " Indentation color
 let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
-
 
 let g:airline_theme='tomorrow'
 let g:airline_powerline_fonts=1
@@ -365,7 +364,7 @@ let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.spell = 'Ꞩ'
 let g:airline_symbols.notexists = '∄'
-let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_symbols.whitespace = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''

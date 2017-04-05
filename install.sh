@@ -18,8 +18,3 @@ for i in "${arr[@]}"
 do
    make_link $i
 done
-
-
- 
-
-
