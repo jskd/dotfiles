@@ -33,7 +33,6 @@ do
 done
 palette="$palette]"
 
-
 gsettings set $schemaName allow-bold            true
 gsettings set $schemaName audible-bell          false
 gsettings set $schemaName background-color      $background

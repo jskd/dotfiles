@@ -395,18 +395,22 @@ call NERDTreeHighlightFile('cpp', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('h', 'Magenta', 'none', '#ff00ff', '#151515')
 call NERDTreeHighlightFile('hpp', 'Magenta', 'none', '#ff00ff', '#151515')
 
+let g:NERDTreeShowIgnoredStatus = 1
+
+let g:NERDTreeMapNextHunk = "c"
+let g:NERDTreeMapPrevHunk = "c"
 
 let g:NERDTreeIndicatorMapCustom = {
-  \ "Modified"  : '\uf0ad ', # 
-  \ "Staged"    : '\uf055 ', # 
-  \ "Untracked" : '\uF059 ', # 
-  \ "Renamed"   : '\uf040 ', # 
-  \ "Unmerged"  : '\uf407 ', # 
-  \ "Deleted"   : '\uf00d ', # 
-  \ "Dirty"     : "\uf1f8 ", # 
-  \ "Clean"     : '\uf00c ', # 
-  \ 'Ignored'   : '\uf070 ', # 
-  \ "Unknown"   : '\uf141 ' # 
+  \ "Modified"  : " ",
+  \ "Staged"    : " ",
+  \ "Untracked" : " ",
+  \ "Renamed"   : " ",
+  \ "Unmerged"  : " ",
+  \ "Deleted"   : " ",
+  \ "Dirty"     : " ",
+  \ "Clean"     : " ",
+  \ 'Ignored'   : " ",
+  \ "Unknown"   : " "
 \ }
 
 autocmd BufNewFile,BufReadPost *.c,*.h,*.cpp,*.hpp call SetCOptions()
