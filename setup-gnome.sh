@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-sudo apt-get install gnome-terminal gconf2
-
 profileID=$(gsettings get org.gnome.Terminal.ProfilesList default)
 profileID=${profileID:1:-1}
-
 
 schemaName="org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profileID/"
 
@@ -52,8 +49,6 @@ gsettings set $schemaName use-system-font       false
 gsettings set $schemaName use-theme-colors      false
 gsettings set $schemaName visible-name          'custom'
 
-
-
 schemaName="org.gnome.Terminal.Legacy.Settings"
 
 gsettings set $schemaName confirm-close         false
@@ -61,3 +56,9 @@ gsettings set $schemaName dark-theme            true
 gsettings set $schemaName default-show-menubar  false
 gsettings set $schemaName encodings             "['UTF-8']"
 
+cp $HOME/.dotfiles/tomorrow-theme/GEdit/Tomorrow-Night-Bright.xml $HOME/.local/share/gedit/styles/Tomorrow-Night-Bright.xml
+
+schemaName="org.gnome.gedit.preferences.editor"
+
+gsettings set $schemaName editor-font           'InconsolataForPowerline Nerd Font Medium 12'
+gsettings set $schemaName scheme                'tomorrownightbright'
