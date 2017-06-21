@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Creating vim directory..."
+mkdir -p vim
+
 DOTFILES_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 make_link () {
@@ -23,7 +26,7 @@ echo "Installing plugin manager..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-echo "Creating vimtmp directory..."
+echo "Creating vimbackup directory..."
 mkdir -p ~/.vim/backup
 
 echo "Installing plugins..."
