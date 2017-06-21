@@ -313,6 +313,7 @@ colorscheme Tomorrow-Night-Bright
 
 " syntastic cpp
 let g:syntastic_cpp_check_header = 1
+let g:syntastic_c_include_dirs = ["includes", "headers", "inc"]
 
 let g:syntastic_cpp_compiler = "g++"
 let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall -Wextra -Wpedantic"
