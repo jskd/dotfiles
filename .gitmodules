@@ -17,4 +17,8 @@
 [submodule "nerd-fonts"]
 	path = nerd-fonts
 	url = git@github.com:ryanoasis/nerd-fonts.git
-	shallow = true
+  shallow = true
+[submodule "base16-shell"]
+	path = base16-shell
+  url = git@github.com:chriskempson/base16-shell.git
+  shallow = true

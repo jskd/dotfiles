@@ -50,9 +50,9 @@ if dein#load_state('~/.vim/bundles/dein.vim')
   call dein#add( 'vim-airline/vim-airline')
   call dein#add( 'vim-airline/vim-airline-themes')
 
-  call dein#add( 'altercation/vim-colors-solarized')
-  call dein#add( 'flazz/vim-colorschemes')
-  call dein#add( 'nathanaelkane/vim-indent-guides')
+  "call dein#add( 'altercation/vim-colors-solarized')
+  "call dein#add( 'flazz/vim-colorschemes')
+  "call dein#add( 'nathanaelkane/vim-indent-guides')
 
   call dein#add('ntpeters/vim-better-whitespace')
 
@@ -61,6 +61,10 @@ if dein#load_state('~/.vim/bundles/dein.vim')
 
 endif
 
+let base16colorspace=256
+set term=xterm-256color
+
+colorscheme base16-bright
 
 filetype plugin indent on
 
@@ -309,7 +313,6 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
 nmap <F8> :TagbarToggle<CR>
 
 syntax enable
-colorscheme Tomorrow-Night-Bright
 
 " syntastic cpp
 let g:syntastic_cpp_check_header = 1
@@ -326,22 +329,24 @@ let g:syntastic_style_error_symbol='⚑'
 let g:syntastic_warning_symbol=''
 let g:syntastic_style_warning_symbol='⚐'
 
+highlight Search term=reverse ctermfg=0 ctermbg=3
+
 "highlight link SyntasticErrorSign SignColumn
 "highlight link SyntasticWarningSign SignColumn
 "highlight link SyntasticStyleErrorSign SignColumn
 "highlight link SyntasticStyleWarningSign SignColumn
 
-highlight SyntasticErrorSign ctermfg=white ctermbg=red
-highlight SyntasticWarningSign ctermfg=white ctermbg=blue
-highlight SyntasticStyleErrorSign ctermfg=white ctermbg=yellow
-highlight SyntasticStyleWarningSign ctermfg=white ctermbg=blue
+"highlight SyntasticErrorSign ctermfg=white ctermbg=red
+"highlight SyntasticWarningSign ctermfg=white ctermbg=blue
+"highlight SyntasticStyleErrorSign ctermfg=white ctermbg=yellow
+"highlight SyntasticStyleWarningSign ctermfg=white ctermbg=blue
 
 " Indentation color
 let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
 
-let g:airline_theme='tomorrow'
+"let g:airline_theme='tomorrow'
 let g:airline_powerline_fonts=1
 
 
