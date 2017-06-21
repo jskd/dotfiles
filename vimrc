@@ -1,69 +1,51 @@
 set encoding=utf-8
 set fileencoding=utf-8
 set nocompatible
+set runtimepath+=~/.vim/
+set backupdir=~/.vim/backup
 
 "-----------------------------------------------------------------------
 " Plugins
 "-----------------------------------------------------------------------
+call plug#begin('~/.vim/plugged')
 
-set runtimepath+=~/.vim/bundles/dein.vim
+Plug 'chriskempson/base16-vim'
+Plug 'majutsushi/tagbar'
+Plug 'airblade/vim-gitgutter'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-if dein#load_state('~/.vim/bundles/dein.vim')
+" Navigation
+Plug 'scrooloose/nerdtree'
+Plug 'xuyuanp/nerdtree-git-plugin'
 
+" syntax checking
+Plug 'scrooloose/syntastic'
 
-  let g:dein#types#git#default_protocol= 'ssh'
+" auto completion
+Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'Shougo/neoinclude.vim'
+Plug 'osyo-manga/vim-marching'
+"Plug 'the-lambda-church/merlin' "ocaml
+"Plug 'davidhalter/jedi-vim' " Py
+Plug 'rip-rip/clang_complete' " cpp
 
+" display color rgb/hex
+Plug 'lilydjwg/colorizer'
 
-  call dein#begin(expand('~/.vim/dein'))
+" powerbar
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-  call dein#add('Shougo/dein.vim')
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'ntpeters/vim-better-whitespace'
 
-  call dein#add( 'gmarik/vundle' )
-  call dein#add( 'majutsushi/tagbar')
-
-  call dein#add( 'airblade/vim-gitgutter')
-
-  call dein#add( 'terryma/vim-multiple-cursors')
-
-  " Navigation
-  call dein#add( 'scrooloose/nerdtree.git')
-  call dein#add( 'xuyuanp/nerdtree-git-plugin')
-
-  " syntax checking
-  call dein#add( 'scrooloose/syntastic')
-
-  " auto completion
-  call dein#add( 'Shougo/vimproc.vim')
-  call dein#add( 'Shougo/neocomplete.vim')
-  call dein#add( 'Shougo/neosnippet')
-  call dein#add( 'Shougo/neosnippet-snippets')
-  call dein#add( 'Shougo/neoinclude.vim')
-  call dein#add( 'osyo-manga/vim-marching')
-  call dein#add( 'the-lambda-church/merlin') "ocaml
-  call dein#add( 'davidhalter/jedi-vim') " Py
-  call dein#add( 'rip-rip/clang_complete') " cpp
-
-  " display color rgb/hex
-  call dein#add( 'lilydjwg/colorizer')
-
-  " powerbar
-  call dein#add( 'vim-airline/vim-airline')
-  call dein#add( 'vim-airline/vim-airline-themes')
-
-  "call dein#add( 'altercation/vim-colors-solarized')
-  "call dein#add( 'flazz/vim-colorschemes')
-  "call dein#add( 'nathanaelkane/vim-indent-guides')
-
-  call dein#add('ntpeters/vim-better-whitespace')
-
-  call dein#end()
-  call dein#save_state()
-
-endif
+call plug#end()
 
 let base16colorspace=256
-set term=xterm-256color
-
 colorscheme base16-bright
 
 filetype plugin indent on
@@ -127,11 +109,11 @@ let NERDTreeMinimalUI=1
 "-----------------------------------------------------------------------
 
 " merlin
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
+"let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+"execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
 " ocp-indent
-set rtp^="/home/jskd/.opam/4.02.3/share/ocp-indent/vim"
+"set rtp^="/home/jskd/.opam/4.02.3/share/ocp-indent/vim"
 
 "-----------------------------------------------------------------------
 " Multiple cursors

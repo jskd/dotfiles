@@ -18,3 +18,13 @@ for i in "${arr[@]}"
 do
    make_link $i
 done
+
+echo "Installing plugin manager..."
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+echo "Creating vimtmp directory..."
+mkdir -p ~/.vim/backup
+
+echo "Installing plugins..."
+vim +PlugInstall +qall
