@@ -32,6 +32,7 @@ Plug 'osyo-manga/vim-marching'
 "Plug 'the-lambda-church/merlin' "ocaml
 "Plug 'davidhalter/jedi-vim' " Py
 Plug 'rip-rip/clang_complete' " cpp
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 " display color rgb/hex
 Plug 'lilydjwg/colorizer'
@@ -288,9 +289,17 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_cpp_compiler = "g++"
+let g:syntastic_cpp_compiler = "arm-none-eabi-g++"
 let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall -Wextra -Wpedantic"
 let g:cssColorVimDoNotMessMyUpdatetime = 1
+let g:syntastic_cpp_config_file = './.include'
+
+
+let g:syntastic_c_compiler = 'arm-none-eabi-gcc'
+let g:syntastic_c_generic = 1
+
+let g:syntastic_asm_compiler = 'arm-none-eabi-gcc'
+let g:syntastic_asm_generic = 1
 
 nmap <F8> :TagbarToggle<CR>
 
@@ -299,7 +308,7 @@ syntax enable
 " syntastic cpp
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_c_include_dirs = ["includes", "headers", "inc"]
-
+let g:syntastic_c_auto_refresh_includes = 1
 let g:syntastic_cpp_compiler = "g++"
 let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall -Wextra -Wpedantic"
 let g:syntastic_always_populate_loc_list = 1
@@ -410,3 +419,15 @@ function! SetCOptions()
   let g:indent_guides_enable_on_vim_startup = 1
   :IndentGuidesEnable
 endfunction
+
+
+"------------------------------------------------------------------------------
+" vim-cpp-enhanced-highlight
+"------------------------------------------------------------------------------
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_experimental_simple_template_highlight = 1
+let g:cpp_experimental_template_highlight = 1
+let g:cpp_concepts_highlight = 1
+let c_no_curly_error=1
