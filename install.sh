@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "Clone submodule"
+git submodule init
+git submodule update --depth 1 --recursive --remote
+
 echo "Creating vim directory..."
 mkdir -p vim
 
