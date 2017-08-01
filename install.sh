@@ -7,6 +7,13 @@ git submodule update --depth 1 --recursive --remote
 echo "Creating vim directory..."
 mkdir -p vim
 
+echo "Install font"
+cd nerd-fonts/
+./install.sh
+cd ..
+
+
+
 DOTFILES_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 make_link () {
