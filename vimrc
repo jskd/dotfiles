@@ -30,7 +30,7 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/neoinclude.vim'
 Plug 'osyo-manga/vim-marching'
 "Plug 'the-lambda-church/merlin' "ocaml
-"Plug 'davidhalter/jedi-vim' " Py
+Plug 'davidhalter/jedi-vim' " Py
 Plug 'rip-rip/clang_complete' " cpp
 Plug 'octol/vim-cpp-enhanced-highlight'
 
@@ -260,7 +260,7 @@ endif
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " force partterns
@@ -431,3 +431,13 @@ let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 let c_no_curly_error=1
+
+"------------------------------------------------------------------------------
+" date
+"------------------------------------------------------------------------------
+:nnoremap <F5> "=strftime("%c")<CR>P
+:inoremap <F5> <C-R>=strftime("%c")<CR>
+
+:inoremap <F2>  * @author Jérôme SKODA <contact@jeromeskoda.fr>
+
+let g:jedi#force_py_version = 3
