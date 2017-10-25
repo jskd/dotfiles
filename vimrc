@@ -9,11 +9,18 @@ set backupdir=~/.vim/backup
 "-----------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'zchee/deoplete-clang'
 Plug 'chriskempson/base16-vim'
 Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Navigation
 Plug 'scrooloose/nerdtree'
@@ -24,7 +31,6 @@ Plug 'scrooloose/syntastic'
 
 " auto completion
 Plug 'Shougo/vimproc.vim'
-Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/neoinclude.vim'
@@ -45,11 +51,15 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
-
 let base16colorspace=256
 colorscheme base16-bright
 
 filetype plugin indent on
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#clang#libclang_path='/usr/lib/llvm-3.9/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header='/usr/lib/llvm-3.9/'
 
 " enable syntax highlighting
 syntax on
