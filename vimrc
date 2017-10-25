@@ -452,4 +452,11 @@ let c_no_curly_error=1
 :tnoremap <Esc> <C-\><C-n>
 
 
+:map - <C-W>-
+:map + <C-W>+
+:map <M-<> <C-W><
+:map <M->> <C-W>>
+
+
+
 let g:jedi#force_py_version = 3
