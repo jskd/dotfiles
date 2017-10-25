@@ -17,6 +17,8 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 Plug 'zchee/deoplete-clang'
+Plug 'zchee/deoplete-jedi'
+
 Plug 'chriskempson/base16-vim'
 Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
@@ -36,8 +38,6 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/neoinclude.vim'
 Plug 'osyo-manga/vim-marching'
 "Plug 'the-lambda-church/merlin' "ocaml
-Plug 'davidhalter/jedi-vim' " Py
-Plug 'rip-rip/clang_complete' " cpp
 Plug 'octol/vim-cpp-enhanced-highlight'
 
 " display color rgb/hex
