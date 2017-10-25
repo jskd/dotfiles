@@ -42,3 +42,7 @@ mkdir -p ~/.vim/backup
 
 echo "Installing plugins..."
 vim +PlugInstall +qall
+
+echo "Add config in neovim"
+mkdir -p ~/.config/nvim
+ln -s ~/.vimrc ~/.config/nvim/init.vim
