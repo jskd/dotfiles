@@ -449,5 +449,7 @@ let c_no_curly_error=1
 :inoremap <F5> <C-R>=strftime("%c")<CR>
 
 :inoremap <F2>  * @author Jérôme SKODA <contact@jeromeskoda.fr>
+:tnoremap <Esc> <C-\><C-n>
+
 
 let g:jedi#force_py_version = 3
