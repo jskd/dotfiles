@@ -18,6 +18,7 @@ else
 endif
 Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-jedi'
+Plug 'w0rp/ale'
 
 Plug 'chriskempson/base16-vim'
 Plug 'majutsushi/tagbar'
@@ -27,9 +28,6 @@ Plug 'terryma/vim-multiple-cursors'
 " Navigation
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
-
-" syntax checking
-Plug 'scrooloose/syntastic'
 
 " auto completion
 Plug 'Shougo/vimproc.vim'
