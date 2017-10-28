@@ -1,6 +1,7 @@
 export TERM="xterm-256color"
 
 alias v='nvim'
+alias vim='nvim'
 alias n='nautilus . &'
 
 BASE16_SHELL=$HOME/.dotfiles/base16-shell/
