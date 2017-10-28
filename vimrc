@@ -328,6 +328,16 @@ let g:syntastic_style_error_symbol='⚑'
 let g:syntastic_warning_symbol=''
 let g:syntastic_style_warning_symbol='⚐'
 
+
+" ALE config
+let g:ale_echo_msg_error_str= ' '
+let g:ale_echo_msg_warning_str= ' '
+let g:ale_sign_error= ' '
+let g:ale_sign_warning= ' '
+let g:ale_sign_column_always = 1
+let g:ale_c_clang_options = '-std=c11 -Wall -Wextra'
+
+
 highlight Search term=reverse ctermfg=0 ctermbg=3
 
 "highlight link SyntasticErrorSign SignColumn
