@@ -173,7 +173,7 @@ let g:clang_user_options = '-I/usr/include/ -I/usr/include/c++/4.9/'
 
 let g:marching_clang_command = 'usr/bin/clang'
 let g:marching#clang_command#options = {
-\   'cpp': '-std=c++11',
+\   'cpp': '-std=gnu99',
 \ }
 
 let g:marching_include_paths = [
