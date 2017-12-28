@@ -1,6 +1,7 @@
 [user]
-  name = jskd
-  email = git@jeromeskoda.fr
+  name = Jerome Skoda
+  username = jskd
+  email = contact@jeromeskoda.fr
 [core]
   editor = nvim
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
@@ -8,3 +9,9 @@
 [alias]
   l = log --oneline
   lg = log --oneline --graph --decorate
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+  whitespace = red reverse
